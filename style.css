@@ -1,26 +1,41 @@
-/* Reset */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   font-family: "Instrument Serif", serif;
   background-color: #dbdbd5;
-  max-width: 1440px;
   margin: 0 auto;
   overflow-x: hidden;
 }
 
-/* Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&display=swap");
+/* 針對 Section 1, 2, 3, 4, 5, 6, 8, 9 和 Footer 的容器 */
+.section-1-container,
+.section-2-container,
+.section-3-container,
+.section-4-container,
+.section-5-container,
+.section-6-container,
+.section-8-container,
+.section-9-container,
+.footer-container {
+  max-width: 1200px; /* 設定你要求的 1200px */
+  width: 100%;
+  padding: 0 20px; /* 給予一點左右緩衝，避免小螢幕時貼邊 */
+}
 
 /* Section 1 */
 .section-1 {
   display: flex;
   justify-content: center;
-  padding: 0 180px 57.6px;
+  padding: 0 0 60px;
 }
 
 .section-1-container {
@@ -28,17 +43,16 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 57.6px;
+  gap: 58px;
   position: relative;
 }
 
 .photo-card-1 {
-  width: 450px;
-  height: 588px;
+  width: 600px;
+  min-height: 780px;
   background-color: #ffffff;
-  border-radius: 0 0 225px 225px;
+  border-radius: 0 0 350px 350px;
   position: absolute;
-  left: 393.6px;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -63,22 +77,22 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  gap: 9.6px;
+  gap: 10px;
   padding-left: 6px;
 }
 
 .dominic {
   font-family: "Bebas Neue", sans-serif;
-  font-size: 28.8px;
-  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 28px;
   color: #1f1f1d;
 }
 
 .logo-rect {
-  width: 28.8px;
-  height: 28.8px;
+  width: 24px;
+  height: 24px;
   background-color: #1f1f1d;
-  border-radius: 14.4px;
+  border-radius: 14px;
 }
 
 .menu {
@@ -89,23 +103,24 @@ header {
 .menu-btn {
   display: flex;
   align-items: center;
-  gap: 9.6px;
+  gap: 10px;
   background-color: #1f1f1d;
   border-radius: 48px;
-  padding: 9.6px;
+  padding: 10px;
   width: 102px;
   height: 48px;
 }
 
 .menu-btn span {
+  text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 16.8px;
+  font-size: 17px;
   color: #ffffff;
 }
 
 .menu-btn img {
-  width: 19.2px;
-  height: 14.4px;
+  width: 20px;
+  height: 15px;
 }
 
 .section-1-main {
@@ -113,32 +128,34 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  gap: 159.6px;
+  gap: 160px;
 }
 
 .section1-title {
   display: flex;
   flex-direction: column;
-  gap: 19.2px;
-  width: 367.2px;
+  gap: 19px;
+  width: 350px;
 }
 
 .intro {
-  font-size: 28.8px;
+  font-size: 30px;
   line-height: 1.47em;
   color: #1f1f1d;
 }
 
 .section1-title h1 {
+  text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 76.8px;
+  font-size: 100px;
   line-height: 1em;
   color: #1f1f1d;
+  font-weight: 400;
 }
 
 .section1-title .desc {
-  font-size: 21.6px;
-  line-height: 1.47em;
+  font-size: 30px;
+  line-height: 1.5em;
   color: #1f1f1d;
 }
 
@@ -149,13 +166,14 @@ header {
   gap: 16px;
   background-color: #1f1f1d;
   border-radius: 72px;
-  padding: 9.6px;
+  padding: 10px;
   width: 174px;
-  height: 52.8px;
+  height: 53px;
   border: none;
   color: #ffffff;
+  text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 21.6px;
+  font-size: 14px;
 }
 
 .btn-primary img {
@@ -167,11 +185,12 @@ header {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 33.6px;
-  width: 109.2px;
+  gap: 34px;
+  width: 109px;
 }
 
 .stat h4 {
+  text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
   font-size: 48px;
   line-height: 1em;
@@ -180,7 +199,7 @@ header {
 }
 
 .stat p {
-  font-size: 16.8px;
+  font-size: 17px;
   line-height: 1em;
   color: #8f8f8c;
 }
@@ -195,20 +214,21 @@ header {
 .service {
   display: flex;
   flex-direction: column;
-  gap: 9.6px;
-  padding: 0 19.2px 0 0;
+  gap: 10px;
+  padding: 0 19px 0 0;
   width: 25%;
 }
 
 .service h6 {
+  text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 21.6px;
+  font-size: 22px;
   line-height: 1em;
   color: #1f1f1d;
 }
 
 .service p {
-  font-size: 16.8px;
+  font-size: 17px;
   line-height: 1em;
   color: #8f8f8c;
 }
@@ -217,14 +237,14 @@ header {
 .section-2 {
   display: flex;
   justify-content: center;
-  padding: 57.6px 180px;
+  padding: 60px 0;
 }
 
 .section-2-container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 28.8px;
+  gap: 29px;
 }
 
 .title-8 {
@@ -234,13 +254,14 @@ header {
 }
 
 .title-8 h5 {
+  text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 28.8px;
+  font-size: 29px;
   color: #1f1f1d;
 }
 
 .title-8 p {
-  font-size: 19.2px;
+  font-size: 19px;
   color: #8f8f8c;
   margin-left: 240px;
 }
@@ -255,27 +276,27 @@ header {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 9.6px;
+  margin-bottom: 10px;
 }
 
 .cell {
   display: flex;
   align-items: center;
-  gap: 9.6px;
-  padding: 19.2px 0;
+  gap: 10px;
+  padding: 19px 0;
   width: 25%;
-  border: 1.92px solid #c8c8c2;
+  border: 2px solid #c8c8c2;
   border-radius: 0;
 }
 
 .cell img {
-  width: 28.8px;
-  height: 28.8px;
+  width: 29px;
+  height: 29px;
 }
 
 .cell span {
   font-family: "Noto Sans TC", sans-serif;
-  font-size: 16.8px;
+  font-size: 17px;
   font-weight: 700;
   color: #8f8f8c;
 }
@@ -284,19 +305,20 @@ header {
 .section-3 {
   display: flex;
   justify-content: center;
-  padding: 115.2px 180px;
+  padding: 115px 0;
 }
 
 .section-3-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  gap: 43.2px;
+  gap: 43px;
 }
 
 .section-3-container h2 {
+  text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 64.8px;
+  font-size: 65px;
   line-height: 0.81em;
   color: #1f1f1d;
   width: 50%;
@@ -305,12 +327,12 @@ header {
 .about-content {
   display: flex;
   flex-direction: column;
-  gap: 28.8px;
+  gap: 29px;
   width: 50%;
 }
 
 .about-content p {
-  font-size: 21.6px;
+  font-size: 22px;
   line-height: 1.67em;
   color: #8f8f8c;
 }
@@ -323,110 +345,129 @@ header {
 .section-4 {
   display: flex;
   justify-content: center;
-  padding: 57.6px 180px;
+  padding: 60px 0;
 }
 
 .section-4-container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 57.6px;
+  gap: 58px;
+}
+
+.title-3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .title-3 h2 {
+  text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 64.8px;
+  font-size: 65px;
   color: #1f1f1d;
 }
 
 .title-3 p {
-  font-size: 19.2px;
+  font-size: 19px;
   color: #8f8f8c;
-  margin-top: 24px;
 }
 
 .portfolio-grid {
   display: flex;
   flex-direction: column;
-  gap: 57.6px;
+  gap: 48px;
   width: 100%;
 }
 
 .portfolio-item {
   display: flex;
+  width: 100%;
+  flex-direction: column;
   align-items: center;
-  gap: 57.6px;
+  gap: 32px;
 }
 
 .photo-card-2 {
-  width: 480px;
-  height: 453.6px;
+  width: 100%;
+  height: 454px;
   background-color: #ffffff;
-  border-radius: 19.2px;
+  border-radius: 19px;
 }
 
 .portfolio-info {
   display: flex;
-  flex-direction: column;
-  gap: 9.6px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.info-text {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .portfolio-info h5 {
+  text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 28.8px;
+  font-size: 29px;
   color: #1f1f1d;
 }
 
 .portfolio-info p {
-  font-size: 19.2px;
+  font-size: 19px;
   color: #8f8f8c;
 }
 
 .portfolio-info span {
-  font-size: 19.2px;
+  font-size: 19px;
   color: #8f8f8c;
 }
 
 .btn-tag {
   width: 96px;
-  height: 28.8px;
+  height: 29px;
   background-color: #1f1f1d;
-  border-radius: 33.6px;
+  border-radius: 34px;
   border: none;
   color: #ffffff;
   font-family: "Instrument Serif", serif;
-  font-size: 16.8px;
+  font-size: 17px;
 }
 
 /* Section 5 */
 .section-5 {
   display: flex;
   justify-content: center;
-  padding: 115.2px 180px;
+  padding: 115px 0;
 }
 
 .section-5-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  gap: 57.6px;
+  gap: 58px;
 }
 
 .section-5-box1 {
   display: flex;
   flex-direction: column;
-  gap: 19.2px;
+  gap: 19px;
   width: 50%;
 }
 
 .title-4 h2 {
+  text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 64.8px;
+  font-size: 65px;
   color: #1f1f1d;
 }
 
 .title-4 p {
-  font-size: 19.2px;
+  font-size: 19px;
   color: #8f8f8c;
 }
 
@@ -437,24 +478,25 @@ header {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 28.8px;
+  gap: 29px;
 }
 
 .skill {
   display: flex;
   flex-direction: column;
-  gap: 9.6px;
-  padding: 28.8px;
+  gap: 10px;
+  padding: 30px;
 }
 
 .skill h3 {
+  text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 52.8px;
+  font-size: 53px;
   color: #1f1f1d;
 }
 
 .skill p {
-  font-size: 16.8px;
+  font-size: 17px;
   color: #8f8f8c;
 }
 
@@ -462,88 +504,137 @@ header {
 .section-6 {
   display: flex;
   justify-content: center;
-  padding: 57.6px 180px;
+  padding: 60px 0;
 }
 
 .section-6-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  gap: 57.6px;
+  gap: 58px;
 }
 
 .section-6-word {
   display: flex;
   flex-direction: column;
-  gap: 43.2px;
+  gap: 43px;
   width: 50%;
 }
 
 .process-box {
   display: flex;
   flex-direction: column;
-  gap: 28.8px;
+  gap: 29px;
 }
 
 .process-item {
   display: flex;
   flex-direction: column;
-  gap: 19.2px;
-  padding-bottom: 28.8px;
-  border-bottom: 0.6px solid #8f8f8c;
+  gap: 19px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #8f8f8c;
 }
 
 .process-item h5 {
+  text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 28.8px;
+  font-size: 29px;
   color: #1f1f1d;
 }
 
 .process-item p {
-  font-size: 16.8px;
+  font-size: 17px;
   color: #8f8f8c;
 }
 
 .photo-card-3 {
   width: 50%;
-  height: 815.04px;
+  height: 815px;
   background-color: #ffffff;
-  border-radius: 19.2px;
+  border-radius: 19px;
 }
 
 /* Section 7 */
 .section-7 {
   display: flex;
+  width: 100%;
   justify-content: center;
-  padding: 115.2px 180px;
+  padding: 115px 0;
+  overflow: hidden;
 }
 
-.photo-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 9.6px;
+.marquee-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px; /* 兩列之間的間距 */
   width: 100%;
 }
 
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+}
+
+.photo-grid {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
 .photo-card-4 {
-  width: 204px;
-  height: 300px;
+  width: 270px;
+  height: 400px;
   background-color: #ffffff;
   border-radius: 12px;
+  flex-shrink: 0;
+}
+
+/* 向左動畫 */
+.move-left {
+  animation: marquee-left 40s linear infinite;
+}
+
+/* 向右動畫 */
+.move-right {
+  animation: marquee-right 40s linear infinite;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 5px));
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(calc(-50% - 5px));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.photo-grid:hover {
+  animation-play-state: paused;
 }
 
 /* Section 8 */
 .section-8 {
   display: flex;
   justify-content: center;
-  padding: 57.6px 180px;
+  padding: 60px 0;
 }
 
 .section-8-container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 43.2px;
+  gap: 43px;
 }
 
 .pricing-box {
@@ -556,37 +647,38 @@ header {
 .price-card {
   display: flex;
   flex-direction: column;
-  gap: 19.2px;
-  padding: 28.8px;
-  border: 2.16px solid #c8c8c2;
+  gap: 19px;
+  padding: 30px;
+  border: 2px solid #c8c8c2;
   border-radius: 12px;
   flex: 1;
 }
 
 .price-card .btn-secondary {
-  /* 4. 請填入屬性，讓按鈕自動推到卡片的最底部 */
   margin-top: auto;
 }
 
 .price-card h6 {
+  text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 21.6px;
+  font-size: 22px;
   color: #1f1f1d;
 }
 
 .price-card p {
-  font-size: 16.8px;
+  font-size: 17px;
   color: #8f8f8c;
 }
 
 .price {
+  text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 67.2px;
+  font-size: 67px;
   color: #1f1f1d;
 }
 
 .price span {
-  font-size: 19.2px;
+  font-size: 19px;
   color: #8f8f8c;
 }
 
@@ -594,14 +686,14 @@ header {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 9.6px;
+  gap: 10px;
 }
 
 .price-card li {
   display: flex;
   align-items: center;
-  gap: 9.6px;
-  font-size: 16.8px;
+  gap: 10px;
+  font-size: 17px;
   color: #1f1f1d;
 }
 
@@ -614,35 +706,36 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 19.2px;
+  gap: 19px;
   background-color: #1f1f1d;
   border-radius: 72px;
-  padding: 6px 9.6px;
+  padding: 6px 10px;
   width: 100%;
-  height: 52.8px;
+  height: 53px;
   border: none;
   color: #ffffff;
+  text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 16.8px;
+  font-size: 17px;
 }
 
 .btn-secondary img {
-  width: 33.6px;
-  height: 33.6px;
+  width: 34px;
+  height: 34px;
 }
 
 /* Section 9 */
 .section-9 {
   display: flex;
   justify-content: center;
-  padding: 115.2px 180px;
+  padding: 115px 0;
 }
 
 .section-9-container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 57.6px;
+  gap: 58px;
 }
 
 .section-9-title {
@@ -662,24 +755,24 @@ header {
 .faq-item {
   display: flex;
   align-items: center;
-  gap: 9.6px;
-  padding: 19.2px 28.8px 19.2px 0;
-  border-bottom: 0.6px solid #8f8f8c;
+  gap: 10px;
+  padding: 19px 29px 19px 0;
+  border-bottom: 1px solid #8f8f8c;
 }
 
 .faq-question {
   display: flex;
   align-items: center;
-  gap: 9.6px;
+  gap: 10px;
 }
 
 .faq-question img {
-  width: 14.4px;
-  height: 14.4px;
+  width: 14px;
+  height: 14px;
 }
 
 .faq-question span {
-  font-size: 16.8px;
+  font-size: 17px;
   color: #1f1f1d;
 }
 
@@ -688,31 +781,33 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 57.6px 180px;
+  align-items: center;
+  padding: 58px 180px;
 }
 
 .footer-container {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  gap: 19.2px;
+  gap: 19px;
 }
 
 .footer-left {
   display: flex;
   flex-direction: column;
-  gap: 19.2px;
+  gap: 19px;
   width: 50%;
 }
 
 .footer-left h5 {
+  text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 28.8px;
+  font-size: 29px;
   color: #1f1f1f;
 }
 
 .footer-left p {
-  font-size: 16.8px;
+  font-size: 17px;
   color: #000000;
   line-height: 1.67em;
 }
@@ -721,8 +816,8 @@ footer {
   display: flex;
   justify-content: space-between;
   width: 50%;
-  gap: 9.6px;
-  padding: 0 28.8px;
+  gap: 10px;
+  padding: 0 29px;
 }
 
 .footer-menu,
@@ -730,36 +825,37 @@ footer {
 .footer-social {
   display: flex;
   flex-direction: column;
-  gap: 19.2px;
+  gap: 19px;
 }
 
 .footer-menu p:first-child,
 .footer-navigation p:first-child,
 .footer-social p:first-child {
+  text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 16.8px;
+  font-size: 17px;
   color: #000000;
 }
 
 .footer-menu p,
 .footer-navigation p {
-  font-size: 16.8px;
+  font-size: 17px;
   color: #000000;
 }
 
 .social-link {
   display: flex;
   align-items: center;
-  gap: 13.2px;
+  gap: 13px;
 }
 
 .social-link img {
-  width: 19.2px;
-  height: 19.2px;
+  width: 19px;
+  height: 19px;
 }
 
 .social-link span {
-  font-size: 16.8px;
+  font-size: 17px;
   color: #1f1f1d;
 }
 
@@ -767,31 +863,31 @@ footer {
   position: relative;
   width: 100%;
   height: 300px;
-  margin-top: 38.4px;
+  margin-top: 38px;
 }
 
 .bg-text {
   position: absolute;
-  left: 0;
+  left: calc(50% - 441.5px);
   top: 0;
   font-family: "Instrument Serif", serif;
   font-size: 300px;
   color: #c8c8c2;
   line-height: 1em;
-  letter-spacing: 2.16px;
+  letter-spacing: 2px;
 }
 
 .bg-subtitle {
   position: absolute;
-  left: 156px;
-  top: 38.4px;
+  left: 500px;
+  top: 38px;
+  text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 38.4px;
+  font-size: 38px;
   color: #c8c8c2;
-  line-height: 0.81em;
+  line-height: 0.8em;
 }
 
-/* Responsive */
 @media (max-width: 1440px) {
   body {
     width: 100%;
