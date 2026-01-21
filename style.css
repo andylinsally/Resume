@@ -16,7 +16,6 @@ body {
   overflow-x: hidden;
 }
 
-/* 針對 Section 1, 2, 3, 4, 5, 6, 8, 9 和 Footer 的容器 */
 .section-1-container,
 .section-2-container,
 .section-3-container,
@@ -26,9 +25,18 @@ body {
 .section-8-container,
 .section-9-container,
 .footer-container {
-  max-width: 1200px; /* 設定你要求的 1200px */
+  max-width: 1200px;
   width: 100%;
-  padding: 0 20px; /* 給予一點左右緩衝，避免小螢幕時貼邊 */
+  padding: 0 20px;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  font-family: "Bebas Neue", sans-serif;
 }
 
 /* Section 1 */
@@ -48,8 +56,8 @@ body {
 }
 
 .photo-card-1 {
-  width: 600px;
-  min-height: 780px;
+  width: 550px;
+  min-height: 700px;
   background-color: #ffffff;
   border-radius: 0 0 350px 350px;
   position: absolute;
@@ -103,6 +111,7 @@ header {
 .menu-btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
   background-color: #1f1f1d;
   border-radius: 48px;
@@ -160,10 +169,10 @@ header {
 }
 
 .btn-primary {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 10px;
   background-color: #1f1f1d;
   border-radius: 72px;
   padding: 10px;
@@ -173,12 +182,19 @@ header {
   color: #ffffff;
   text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 14px;
+  font-size: 24px;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.btn-primary img {
-  width: 36px;
-  height: 36px;
+.btn-arrow-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: #ffffff;
+  border-radius: 50%;
 }
 
 .project-stats {
@@ -186,7 +202,14 @@ header {
   flex-direction: column;
   align-items: flex-end;
   gap: 34px;
-  width: 109px;
+  width: 110px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
 }
 
 .stat h4 {
@@ -196,6 +219,7 @@ header {
   line-height: 1em;
   text-align: right;
   color: #1f1f1d;
+  font-weight: 400;
 }
 
 .stat p {
@@ -206,17 +230,24 @@ header {
 
 .section-1-collect {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
   gap: 12px;
+  margin-top: 32px;
 }
 
 .service {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 0 19px 0 0;
+  padding: 0 20px 0 0;
   width: 25%;
+  border-right: 1px solid rgba(143, 143, 140, 0.5);
+}
+
+.service:last-child {
+  border-right: none;
 }
 
 .service h6 {
@@ -225,6 +256,7 @@ header {
   font-size: 22px;
   line-height: 1em;
   color: #1f1f1d;
+  font-weight: 400;
 }
 
 .service p {
@@ -250,6 +282,7 @@ header {
 .title-8 {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   width: 100%;
 }
 
@@ -274,24 +307,21 @@ header {
 
 .cell-box-container {
   display: flex;
-  justify-content: space-between;
+  flex: 1;
   width: 100%;
   margin-bottom: 10px;
+  gap: -1px;
 }
 
 .cell {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 10px;
-  padding: 19px 0;
+  padding: 20px 0;
   width: 25%;
   border: 2px solid #c8c8c2;
   border-radius: 0;
-}
-
-.cell img {
-  width: 29px;
-  height: 29px;
 }
 
 .cell span {
@@ -392,7 +422,7 @@ header {
   width: 100%;
   height: 454px;
   background-color: #ffffff;
-  border-radius: 19px;
+  border-radius: 20px;
 }
 
 .portfolio-info {
@@ -478,12 +508,16 @@ header {
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 29px;
+  background-color: rgba(143, 143, 140, 0.5);
+  gap: 1px;
+  padding: 0;
+  border: none;
 }
 
 .skill {
   display: flex;
   flex-direction: column;
+  background-color: #dbdbd5;
   gap: 10px;
   padding: 30px;
 }
@@ -532,7 +566,7 @@ header {
   flex-direction: column;
   gap: 19px;
   padding-bottom: 30px;
-  border-bottom: 1px solid #8f8f8c;
+  border-bottom: 1px solid rgba(143, 143, 140, 0.5);
 }
 
 .process-item h5 {
@@ -551,7 +585,7 @@ header {
   width: 50%;
   height: 815px;
   background-color: #ffffff;
-  border-radius: 19px;
+  border-radius: 20px;
 }
 
 /* Section 7 */
@@ -567,7 +601,7 @@ header {
   display: flex;
   width: 100%;
   flex-direction: column;
-  gap: 20px; /* 兩列之間的間距 */
+  gap: 20px;
   width: 100%;
 }
 
@@ -706,7 +740,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 19px;
+  gap: 10px;
   background-color: #1f1f1d;
   border-radius: 72px;
   padding: 6px 10px;
@@ -716,12 +750,8 @@ header {
   color: #ffffff;
   text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
-  font-size: 17px;
-}
-
-.btn-secondary img {
-  width: 34px;
-  height: 34px;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 /* Section 9 */
@@ -757,7 +787,7 @@ header {
   align-items: center;
   gap: 10px;
   padding: 19px 29px 19px 0;
-  border-bottom: 1px solid #8f8f8c;
+  border-bottom: 1px solid rgba(143, 143, 140, 0.5);
 }
 
 .faq-question {
@@ -861,15 +891,15 @@ footer {
 
 .footer-bg {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 300px;
   margin-top: 38px;
 }
 
 .bg-text {
-  position: absolute;
-  left: calc(50% - 441.5px);
-  top: 0;
   font-family: "Instrument Serif", serif;
   font-size: 300px;
   color: #c8c8c2;
@@ -879,8 +909,8 @@ footer {
 
 .bg-subtitle {
   position: absolute;
-  left: 500px;
-  top: 38px;
+  left: 30%;
+  top: 15%;
   text-transform: uppercase;
   font-family: "Bebas Neue", sans-serif;
   font-size: 38px;
