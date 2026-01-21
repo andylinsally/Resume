@@ -87,6 +87,7 @@ header {
   align-items: center;
   gap: 10px;
   padding-left: 6px;
+  text-decoration: none;
 }
 
 .dominic {
@@ -118,6 +119,7 @@ header {
   padding: 10px;
   width: 102px;
   height: 48px;
+  cursor: pointer;
 }
 
 .menu-btn span {
@@ -458,6 +460,9 @@ header {
 }
 
 .btn-tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 96px;
   height: 29px;
   background-color: #1f1f1d;
@@ -466,6 +471,7 @@ header {
   color: #ffffff;
   font-family: "Instrument Serif", serif;
   font-size: 17px;
+  text-decoration: none;
 }
 
 /* Section 5 */
@@ -796,9 +802,8 @@ header {
   gap: 10px;
 }
 
-.faq-question img {
-  width: 14px;
-  height: 14px;
+.faq-question svg {
+  cursor: pointer;
 }
 
 .faq-question span {
@@ -856,6 +861,14 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 19px;
+  text-decoration: none;
+}
+
+.footer-menu a,
+.footer-navigation a,
+.footer-social a {
+  text-decoration: none;
+  color: #000000;
 }
 
 .footer-menu p:first-child,
@@ -877,11 +890,6 @@ footer {
   display: flex;
   align-items: center;
   gap: 13px;
-}
-
-.social-link img {
-  width: 19px;
-  height: 19px;
 }
 
 .social-link span {
