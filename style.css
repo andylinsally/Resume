@@ -57,7 +57,7 @@ h6 {
 
 .photo-card-1 {
   width: 550px;
-  min-height: 700px;
+  max-height: 750px;
   background-color: #ffffff;
   border-radius: 0 0 350px 350px;
   position: absolute;
@@ -65,6 +65,14 @@ h6 {
   left: 50%;
   transform: translateX(-50%);
   z-index: -1;
+  overflow: hidden;
+}
+
+.photo-card-1 img {
+  width: 100%;
+  scale: 1.2;
+  height: auto;
+  object-fit: cover;
 }
 
 header,
@@ -425,6 +433,13 @@ header {
   height: 454px;
   background-color: #ffffff;
   border-radius: 20px;
+  overflow: hidden;
+}
+
+.photo-card-2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .portfolio-info {
@@ -592,6 +607,13 @@ header {
   height: 815px;
   background-color: #ffffff;
   border-radius: 20px;
+  overflow: hidden;
+}
+
+.photo-card-3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Section 7 */
@@ -629,6 +651,13 @@ header {
   background-color: #ffffff;
   border-radius: 12px;
   flex-shrink: 0;
+  overflow: hidden;
+}
+
+.photo-card-4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* 向左動畫 */
